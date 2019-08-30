@@ -1,4 +1,5 @@
 import random
+import time
 
 
 def guess_the_number():
@@ -13,7 +14,7 @@ def guess_the_number():
             continue
         if first_input == "1":
             a = [i for i in range(1,11)]
-            print("\nEasy peasy it is! Let\'s take it nice and easy.")
+            print("\nEasy peasy it is! Let\'s take it nice and slow.")
             break
         if first_input == "2":
             a = [i for i in range(1,21)]
@@ -24,7 +25,9 @@ def guess_the_number():
             print("\nGood luck! Bet you can\'t guess in under 10 tries!")
             break
     guess = random.randint(1,a[-1])
-    print("\n...thinking...ok, got it!\n")
+    print("\n...thinking...")
+    time.sleep(1)
+    print("Ok, got it!")
     print("--------------------------------------------------")
     
     print("\nI\'m thinking of a number between {0} and {1}...".format(1,a[-1]))
